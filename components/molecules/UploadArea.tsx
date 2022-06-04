@@ -1,8 +1,8 @@
-import * as React from "react";
-import { Box, Typography } from "@mui/material";
+import theme from "styles/theme";
+import { Box, Button, Typography } from "@mui/material";
 import {
-  SwipeRightAlt as SwipeRightAltIcon,
-  InsertDriveFile as InsertDriveFileIcon,
+  SwipeRightAltOutlined as SwipeRightAltIcon,
+  UploadFileOutlined as UploadFileIcon,
 } from "@mui/icons-material";
 
 export default function Upload() {
@@ -10,7 +10,8 @@ export default function Upload() {
     <Box
       height="40vh"
       maxHeight="300px"
-      border="3px dashed black"
+      border="3px dashed"
+      borderColor={theme.palette.primary.main}
       borderRadius="8px"
       position="relative"
       display="flex"
@@ -18,10 +19,22 @@ export default function Upload() {
       justifyContent="center"
       alignItems="center"
     >
-      <InsertDriveFileIcon />
+      <UploadFileIcon color="primary" fontSize="large" />
+      <Box py={2}>
+        <Button variant="contained" disableElevation>
+          Selecione
+        </Button>
+      </Box>
+
+      <Typography variant="body1">
+        seu{" "}
+        <Box component="span" fontWeight="bold">
+          histórico escolar
+        </Box>
+      </Typography>
 
       <Box position="absolute" display="flex" alignItems="center" top={0} left={0} m={2}>
-        <SwipeRightAltIcon />
+        <SwipeRightAltIcon color="primary" />
 
         <Typography ml={1} variant="body2">
           Arraste e solte ou...

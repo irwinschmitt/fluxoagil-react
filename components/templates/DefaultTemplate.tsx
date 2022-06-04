@@ -1,5 +1,4 @@
 import { Box, Container } from "@mui/system";
-import React from "react";
 import Header from "components/organisms/Header";
 
 export default function DefaultTemplate({ children }: React.PropsWithChildren<{}>) {
@@ -8,9 +7,7 @@ export default function DefaultTemplate({ children }: React.PropsWithChildren<{}
       <Header />
 
       <Container>
-        <Box minHeight="100vh" py={8}>
-          {children}
-        </Box>
+        <Box py={8}>{children}</Box>
       </Container>
     </Box>
   );
