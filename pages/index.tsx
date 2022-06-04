@@ -1,9 +1,8 @@
 import * as React from "react";
 import type { NextPage } from "next";
-import { Box, Container, Typography, Toolbar, Grid, AppBar } from "@mui/material";
-import UploadArea from "../src/molecules/UploadArea";
-import Header from "../src/organisms/Header";
-import DefaultTemplate from "../src/templates/DefaultTemplate";
+import { Grid } from "@mui/material";
+import UploadArea from "components/molecules/UploadArea";
+import DefaultTemplate from "components/templates/DefaultTemplate";
 
 const Home: NextPage = () => {
   return (

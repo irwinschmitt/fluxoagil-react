@@ -1,6 +1,6 @@
 import { Box, Container } from "@mui/system";
 import React from "react";
-import Header from "../organisms/Header";
+import Header from "components/organisms/Header";
 
 export default function DefaultTemplate({ children }: React.PropsWithChildren<{}>) {
   return (
