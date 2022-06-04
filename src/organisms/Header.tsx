@@ -1,10 +1,12 @@
-import { Typography, Toolbar, Grid, AppBar } from "@mui/material";
+import { Typography, Toolbar, Container, AppBar } from "@mui/material";
 
 export default function Header() {
   return (
-    <AppBar position="static" elevation={0}>
-      <Toolbar component="header">
-        <Typography variant="h6">Fluxo Ágil</Typography>
+    <AppBar color="transparent" position="absolute" elevation={0}>
+      <Toolbar component="header" disableGutters>
+        <Container>
+          <Typography>Fluxo Ágil</Typography>
+        </Container>
       </Toolbar>
     </AppBar>
   );

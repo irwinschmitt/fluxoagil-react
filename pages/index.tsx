@@ -3,30 +3,33 @@ import type { NextPage } from "next";
 import { Box, Container, Typography, Toolbar, Grid, AppBar } from "@mui/material";
 import UploadArea from "../src/molecules/UploadArea";
 import Header from "../src/organisms/Header";
+import DefaultTemplate from "../src/templates/DefaultTemplate";
 
 const Home: NextPage = () => {
   return (
-    <Box display="flex" flexDirection="column" justifyContent="space-between" minHeight="100vh">
-      <Header />
-
-      <Container maxWidth="lg" sx={{ minHeight: "100%" }}>
-        <Grid container>
-          <Grid item xs={6} p={2}>
-            <UploadArea />
-          </Grid>
-
-          <Grid item xs={6} p={2}>
-            SVG
-          </Grid>
+    <DefaultTemplate>
+      <Grid container spacing={5}>
+        <Grid item xs={12}>
+          <UploadArea />
         </Grid>
-      </Container>
 
-      <AppBar position="static" elevation={0}>
-        <Toolbar component="header">
-          <Typography variant="h6">Fluxo Ágil</Typography>
-        </Toolbar>
-      </AppBar>
-    </Box>
+        <Grid item xs={12} md={4}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error corrupti magnam cumque
+          reprehenderit non, eveniet, laudantium nihil quis nesciunt suscipit corporis eligendi
+          excepturi unde labore sint, saepe et provident accusamus.
+        </Grid>
+        <Grid item xs={12} md={4}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, delectus. Magni natus
+          ipsam, nemo officiis dicta libero illo delectus, possimus in voluptatibus itaque et a
+          doloremque ea, similique id necessitatibus.
+        </Grid>
+        <Grid item xs={12} md={4}>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, labore, repellat aperiam
+          excepturi porro id dolore fugiat possimus quibusdam, eius incidunt asperiores et quia quam
+          consectetur sequi quos. Mollitia, saepe.
+        </Grid>
+      </Grid>
+    </DefaultTemplate>
   );
 };
 

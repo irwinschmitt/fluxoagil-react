@@ -8,12 +8,15 @@ import {
 export default function Upload() {
   return (
     <Box
+      height="40vh"
+      maxHeight="300px"
+      border="3px dashed black"
+      borderRadius="8px"
       position="relative"
       display="flex"
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      sx={{ border: "3px dashed black", borderRadius: "8px", minHeight: "50vh" }}
     >
       <InsertDriveFileIcon />
 
